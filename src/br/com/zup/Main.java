@@ -10,9 +10,9 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Map<String, String> funcionarios = new HashMap<String, String>();
 
-        Boolean finalizar = false;
+        boolean finalizar = false;
 
-        while (finalizar == false) {
+        while (!finalizar) {
 
             System.out.println("--------------------------------------------------");
             System.out.println("|                 MENU DE OPÇÕES                 |");
@@ -28,6 +28,17 @@ public class Main {
             input.nextLine();
 
             if (opcaoDesejada == 1 ){
+                System.out.println("--------------------------------------------------");
+                if (funcionarios.size() == 0){
+                    System.out.println("Não foi encontrado nenhum úsuario cadastrado!");
+                }
+                else {
+                    System.out.println("|             LISTA DE FUNCIONÁRIOS              |");
+                    System.out.println("--------------------------------------------------");
+                    for (String funcionario : funcionarios.keySet()) {
+                        System.out.println("|  " + funcionarios.get(funcionario) + "; CPF: " + funcionario);
+                    }
+                }
                 System.out.println("--------------------------------------------------");
             }
             else if (opcaoDesejada == 2){
