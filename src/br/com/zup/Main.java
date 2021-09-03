@@ -15,6 +15,9 @@ public class Main {
         String emailFuncionario;
         String cpfFuncionario;
         String removerFuncionario;
+        String consultarFuncionario;
+        int cpfDiferente = 0;
+        boolean funcionarioEncontrado = false;
         boolean funcionarioCadastrado = false;
         boolean finalizar = false;
 
@@ -83,6 +86,25 @@ public class Main {
             else if (opcaoDesejada == 3) {
 
                 System.out.println("--------------------------------------------------");
+                System.out.print("|  Digite o CPF do usuário que deseja consultar: ");
+                consultarFuncionario = input.nextLine();
+
+                for (String funcionario : funcionarios.keySet()) {
+                    if (consultarFuncionario.equals(funcionario)) {
+                        System.out.println("|  " + funcionarios.get(funcionario) + "; CPF: " + funcionario);
+                        funcionarioEncontrado = true;
+                        System.out.println("--------------------------------------------------");
+                        System.out.println("Pesquisa finalizada!");
+                        break;
+                    }
+                    else {
+                        cpfDiferente++;
+                    }
+                }
+                if (!funcionarioEncontrado | funcionarios.size() == 0 | cpfDiferente == funcionarios.size()) {
+                    System.out.println("--------------------------------------------------");
+                    System.out.println("CPF não encontrado!");
+                }
             }
             else if (opcaoDesejada == 4) {
 
