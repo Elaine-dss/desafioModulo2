@@ -32,6 +32,21 @@ public class Main {
             }
             else if (opcaoDesejada == 2){
                 System.out.println("--------------------------------------------------");
+                System.out.println("|               FICHA DE CADASTRO                |");
+                System.out.println("--------------------------------------------------");
+                System.out.print("|  Digite o nome completo do funcionario: ");
+                String nomeFuncionario = input.nextLine();
+                System.out.print("|  Digite o telefone do funcionario: ");
+                String telefoneFuncionario = input.nextLine();
+                System.out.print("|  Digite o email do funcionario: ");
+                String emailFuncionario = input.nextLine();
+                System.out.print("|  Digite o CPF do funcionario: ");
+                String cpfFuncionario = input.nextLine();
+                System.out.println("--------------------------------------------------");
+
+                funcionarios.put(cpfFuncionario, "Nome: " + nomeFuncionario + "; Telefone: " + telefoneFuncionario + "; Email: " + emailFuncionario);
+
+                System.out.println("Cadastro do funcionario efetuado com sucesso!");
             }
             else if (opcaoDesejada == 3) {
                 System.out.println("--------------------------------------------------");
