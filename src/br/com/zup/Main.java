@@ -20,6 +20,7 @@ public class Main {
         boolean cadastrarFuncionario = false;
         boolean funcionarioEncontrado = false;
         boolean cpfFuncionarioErrado = false;
+        boolean cadastrarFuncionario = false;
         boolean finalizar = false;
 
         while (!finalizar) {
