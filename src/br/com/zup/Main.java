@@ -20,7 +20,6 @@ public class Main {
         boolean cadastrarFuncionario = false;
         boolean funcionarioEncontrado = false;
         boolean cpfFuncionarioErrado = false;
-        boolean cadastrarFuncionario = false;
         boolean finalizar = false;
 
         while (!finalizar) {
@@ -42,7 +41,7 @@ public class Main {
 
                 case 1:
 
-                    if (funcionarios.size() == 0){
+                    if (funcionarios.size() == 0) {
                         System.out.println("Não foi encontrado nenhum úsuario cadastrado!");
                     }
                     else {
