@@ -75,6 +75,8 @@ public class Main {
 
                         if (cpfFuncionario.equals(funcionario)) {
                             System.out.println("CPF já cadastrado no sistema!");
+                            cadastrarFuncionario = false;
+                            break;
                         }
                         else {
                             cadastrarFuncionario = true;
