@@ -16,7 +16,10 @@ public class Main {
         String cpfFuncionario;
         String removerFuncionario;
         String consultarFuncionario;
+
+        boolean cadastrarFuncionario = false;
         boolean funcionarioEncontrado = false;
+        boolean cpfFuncionarioErrado = false;
         boolean cadastrarFuncionario = false;
         boolean finalizar = false;
 
@@ -117,20 +120,24 @@ public class Main {
                     removerFuncionario = input.nextLine();
                     System.out.println("--------------------------------------------------");
 
-                    if (funcionarios.size() == 0) {
+                    if (funcionarios.size() == 0){
                         System.out.println("CPF não encontrado!");
                     }
                     else {
                         for (String funcionario : funcionarios.keySet()) {
 
                             if (removerFuncionario.equals(funcionario)) {
+                                cpfFuncionarioErrado = false;
                                 funcionarios.remove(funcionario);
                                 System.out.println("Funcionario removido com sucesso!");
                                 break;
                             }
                             else {
-                                System.out.println("CPF não encontrado!");
+                                cpfFuncionarioErrado = true;
                             }
+                        }
+                        if (cpfFuncionarioErrado) {
+                            System.out.println("CPF não encontrado!");
                         }
                     }
                     break;
