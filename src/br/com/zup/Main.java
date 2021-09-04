@@ -17,7 +17,7 @@ public class Main {
         String removerFuncionario;
         String consultarFuncionario;
         boolean funcionarioEncontrado = false;
-        boolean funcionarioCadastrado = false;
+        boolean cadastrarFuncionario = false;
         boolean finalizar = false;
 
         while (!finalizar) {
@@ -75,11 +75,11 @@ public class Main {
                             System.out.println("CPF já cadastrado no sistema!");
                         }
                         else {
-                            funcionarioCadastrado = true;
+                            cadastrarFuncionario = true;
                         }
                     }
 
-                    if (funcionarioCadastrado | funcionarios.size() == 0) {
+                    if (cadastrarFuncionario | funcionarios.size() == 0) {
 
                         funcionarios.put(cpfFuncionario, "Nome: " + nomeFuncionario + "; Telefone: " + telefoneFuncionario + "; Email: " + emailFuncionario);
                         System.out.println("Cadastro do funcionario efetuado com sucesso!");
