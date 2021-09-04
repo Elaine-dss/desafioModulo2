@@ -16,7 +16,6 @@ public class Main {
         String cpfFuncionario;
         String removerFuncionario;
         String consultarFuncionario;
-        int cpfDiferente = 0;
         boolean funcionarioEncontrado = false;
         boolean funcionarioCadastrado = false;
         boolean finalizar = false;
@@ -102,10 +101,10 @@ public class Main {
                             break;
                         }
                         else {
-                            cpfDiferente++;
+                            funcionarioEncontrado = false;
                         }
                     }
-                    if (!funcionarioEncontrado | funcionarios.size() == 0 | cpfDiferente == funcionarios.size()) {
+                    if (!funcionarioEncontrado | funcionarios.size() == 0) {
                         System.out.println("--------------------------------------------------");
                         System.out.println("CPF não encontrado!");
                     }
